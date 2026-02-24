@@ -1,66 +1,44 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <div className={styles.logo}>DEAROLDPHOTOS</div>
+        <nav>
+          <a href="#" className={styles.btnSmall}>Download App</a>
+        </nav>
+      </header>
+
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <section className={styles.hero}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.title}>
+              Old Photos,<br />
+              <span className={styles.highlight}>New Soul.</span>
+            </h1>
+            <div className={styles.heroText}>
+              Restore, colorize, and narrate your family history with state-of-the-art AI. 
+              Don't let your memories fade to gray.
+            </div>
+            <a href="#" className={styles.btnLarge}>Start Restoring Now</a>
+          </div>
+          
+          <div className={`${styles.photoCard} brutalBorder`}>
+            <div className={styles.photoPlaceholder}>
+              VINTAGE<br />MEMORY
+            </div>
+            <p className={styles.photoCaption}>BEFORE & AFTER</p>
+          </div>
+        </section>
       </main>
+
+      <div className="marquee">
+        <div className="marqueeContent">
+          AI RESTORATION • COLORIZATION • FAMILY HISTORY • SMART UPSCALING • OPENROUTER INTEGRATED • 
+          AI RESTORATION • COLORIZATION • FAMILY HISTORY • SMART UPSCALING • OPENROUTER INTEGRATED • 
+        </div>
+      </div>
     </div>
   );
 }
